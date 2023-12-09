@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --white-color: #ffff;
+  --green-color: #98fb98;
+  --offwhite-color: #dfdbdb;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  width: 100%;
+  padding: 2rem 3rem;
+}
+
+.food-card-detail {
+  display: flex;
+  width: 100%;
+  padding: 2rem 3rem;
+}
+
+.food-card-detailText {
+  width: 50%;
+  padding: 0rem 1rem;
+  display: inherit;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.food-card-detailText button {
+  padding: 1rem;
+  border: 0;
+  margin-top: 20px;
+  background-color: var(--green-color);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.food-card-detailText button:hover {
+  background-color: var(--offwhite-color);
+}
+
+.food-card-detailText h2,
+h3,
+p {
+  margin-top: 30px;
+}
+
+.food-card-detailText h3:last-of-type {
+  margin-bottom: -10px;
+}
+
+.food-card-detailText ul li {
+  list-style-type: none;
+}
+
+.food-card-detailImg {
+  width: 50%;
+}
+
+.food-card-detailImg img {
+  max-width: 100%;
+}
+.go-back-link {
+  margin-left: 3rem;
+  margin-top: 5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.not-found p {
+  font-size: 20px;
+}
+
+/* 1200px or less */
+
+@media screen and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .recipe-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .food-card-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .food-card-detailImg,
+  .food-card-detailText {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* 650px or less */
+
+@media screen and (max-width: 650px) {
+  .recipe-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  .food-card-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
