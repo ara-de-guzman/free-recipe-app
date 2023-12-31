@@ -18,17 +18,13 @@ function MenuDetails() {
       .catch((err) => console.log(err));
   }, [mealDetailApi]);
 
-  let counter = 0;
-
-  while (counter < 20) {
-    console.log(counter);
-    counter++;
-  }
-
+console.log(mealDetail)
   return (
     <div>
       <Link to="/">
-        <button className="go-back-link"><FaArrowLeft/> Go Back</button>
+        <button className="go-back-link">
+          <FaArrowLeft /> Go Back
+        </button>
       </Link>
       <div className="food-card-detail">
         <div className="food-card-detailImg">
@@ -38,6 +34,7 @@ function MenuDetails() {
           <h1>{mealDetail.strMeal}</h1>
           <h3>Ingredients</h3>
           <ul>
+            {" "}
             <li>
               {mealDetail.strMeasure1} {mealDetail.strIngredient1}
             </li>

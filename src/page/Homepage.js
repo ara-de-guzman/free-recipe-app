@@ -3,7 +3,6 @@ import { PiSmileySadFill } from "react-icons/pi";
 import "./Main.css";
 
 function Homepage({ recipes }) {
-  console.log(recipes == null);
   return (
     <div className="home-component">
       <div className="recipe-container">

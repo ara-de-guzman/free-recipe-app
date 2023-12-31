@@ -31,7 +31,7 @@ function Header({ onclick, onchange }) {
       <div className="search-container">
         <p>Elevate Your Home Cooking with these Exclusive Free Recipes</p>
         <div className="search-bar">
-          <input type="text" onChange={onchange} />
+          <input type="text" onChange={onchange} placeholder="Search for menu.." />
           <Link to="/">
             <button onClick={onclick}>Search</button>
           </Link>
